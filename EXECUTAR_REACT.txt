@@ -1,0 +1,72 @@
+================================================================
+  CINELOG v2.3 — COMO EXECUTAR O FRONTEND (REACT)
+================================================================
+
+O FRONTEND (cinelog-web) é a interface visual do CineLog.
+Construído com React + Vite. Consome a API via HTTP (fetch).
+
+──────────────────────────────────────────────────────────────
+PRÉ-REQUISITO
+──────────────────────────────────────────────────────────────
+
+A API deve estar rodando ANTES do frontend:
+
+  cd C:\Users\franc\Downloads\projeto-filmes-cinelog\projeto-biblioteca\cinelog-api
+  node server.js
+
+  → http://localhost:3000
+
+──────────────────────────────────────────────────────────────
+PASSO 1 — INSTALAR DEPENDÊNCIAS
+──────────────────────────────────────────────────────────────
+
+  cd C:\Users\franc\Downloads\projeto-filmes-cinelog\projeto-biblioteca\cinelog-web
+  npm install
+
+──────────────────────────────────────────────────────────────
+PASSO 2 — INICIAR O SERVIDOR DE DESENVOLVIMENTO
+──────────────────────────────────────────────────────────────
+
+  npm run dev
+
+Porta padrão: http://localhost:5173
+
+O que é Vite?
+  • Ferramenta de build ultra-rápida para React
+  • Hot reload: alterações no código atualizam a tela instantaneamente
+  • Compila JSX → JavaScript no navegador
+
+──────────────────────────────────────────────────────────────
+COMO FRONTEND E BACKEND SE COMUNICAM
+──────────────────────────────────────────────────────────────
+
+  React (localhost:5173)
+       │
+       │  fetch('http://localhost:3000/filmes/catalogo')
+       ▼
+  Express (localhost:3000)
+       │
+       ├── MySQL (filmes, usuários, avaliações)
+       └── TMDB (posters, catálogo, busca)
+
+Arquivo central: cinelog-web/src/services/api.js
+  → Todas as chamadas HTTP passam por aqui
+
+──────────────────────────────────────────────────────────────
+URLS ÚTEIS
+──────────────────────────────────────────────────────────────
+
+  Home/Catálogo  → http://localhost:5173/
+  Buscar         → http://localhost:5173/buscar
+  Login          → http://localhost:5173/login
+  Admin          → http://localhost:5173/admin
+
+Admin: admin@cinelog.com / admin123
+
+Build para produção:
+  npm run build
+  npm run preview
+
+Documentação completa: DOCUMENTACAO_CINELOG.md
+
+================================================================
