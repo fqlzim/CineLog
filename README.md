@@ -277,14 +277,7 @@ App: **http://localhost:5173**
 
 ---
 
-## Documentação complementar
 
-| Arquivo | Conteúdo |
-|---------|----------|
-| [DOCUMENTACAO_CINELOG.md](./DOCUMENTACAO_CINELOG.md) | Documentação acadêmica detalhada |
-| [EXECUTAR_API.txt](./EXECUTAR_API.txt) | Passo a passo do backend |
-| [EXECUTAR_REACT.txt](./EXECUTAR_REACT.txt) | Passo a passo do frontend |
-| [CREDENCIAIS.md](./CREDENCIAIS.md) | Acesso admin (uso interno / demonstração) |
 
 ---
 
